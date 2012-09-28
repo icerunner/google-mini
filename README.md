@@ -9,18 +9,21 @@ id.xsl is an identity transformation and is a common pattern and free for you to
 
 The three XSLT templates in this directory have been tested on a Google Mini search appliance (version 5.0.4), but should work just as well on a Google Enterprise search appliance.
 
-Use these stylesheets by creating a new Front End on your search appliance (Serving > Front Ends).
-Click on 'edit' for the entry for your new front end.
-In the 'XSLT Stylesheet Editor' box, click 'Edit underlying XSLT code'.
-Paste the contents of one of the templates in this repository into the edit box that appears.
-Click 'Save XSLT Code'
-Click on 'Ok' on the warning box that pops up to agree that you wish to proceed.
+Installing the templates
+------------------------
+
+* Use these stylesheets by creating a new Front End on your search appliance (Serving > Front Ends). I suggest naming the front end after the format it returns.
+* Click on 'edit' for the entry for your new front end.
+* In the 'XSLT Stylesheet Editor' box, click 'Edit underlying XSLT code'.
+* Paste the contents of one of the templates in this repository into the edit box that appears.
+* Click 'Save XSLT Code'
+* Click on 'Ok' on the warning box that pops up to agree that you wish to proceed.
     
 
 The Templates
 =============
 
--------
+
 id.xsl
 -------
     This template will return the search results as XML in the native Google format.
@@ -30,13 +33,12 @@ id.xsl
 
     https://developers.google.com/search-appliance/documentation/614/
     
----------
 json.xsl
 ---------
     This template will turn the search results into JSON formatted data. The structure of the data is as indicated in the example below:
     
     
-
+`
 {
 	"query": "query-string",
 
@@ -118,8 +120,10 @@ json.xsl
 	    "have_next": "1"
 	}
 }
+`
 
-Description of data:
+###Description of data
+
 query: [string] Contains the query string that was passed to the search appliance
 results: [array] Contains hashes corresponding to each search result returned (default max 10 results)
     url: [string] URL to the search result
@@ -136,14 +140,14 @@ results_nav: [hash] Contains information about where in the search results you c
     have_next: [boolean] Is set to 1 if there are more results available, omitted otherwise
     
 
-----------
+
 jsonp.xsl
 ----------
     This template returns data in a JSONP format. The body of data is as described for json.xsl above, but the data is wrapped in a callback function.
 
     When you query the search appliance, you can append a parameter of 'callback' to set the name of the JavaScript function that will process the returned results. For example:
 
-http://search.yourcompany.com/search?output=xml_no_dtd&client=jsonp&proxystylesheet=jsonp&site=default_collection&q=search+query&callback=your_function_name
+`http://search.yourcompany.com/search?output=xml_no_dtd&client=jsonp&proxystylesheet=jsonp&site=default_collection&q=search+query&callback=your_function_name`
 
     If you do not specify a callback parameter, then the default callback function will be 'search_results_callback'.
 
