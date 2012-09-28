@@ -146,7 +146,7 @@ This template returns data in a JSONP format. The body of data is as described f
 
 When you query the search appliance, you can append a parameter of 'callback' to set the name of the JavaScript function that will process the returned results. For example:
 
-`http://search.yourcompany.com/search?output=xml_no_dtd&client=jsonp&proxystylesheet=jsonp&site=default_collection&q=search+query&callback=your_function_name`
+`http://search.yourcompany.com/search?callback=your_function_name&output=xml_no_dtd&client=jsonp&proxystylesheet=jsonp&site=default_collection&q=search+query`
 
 If you do not specify a callback parameter, then the default callback function will be 'search_results_callback'.
 
