@@ -1,7 +1,11 @@
 google-mini
 ===========
 
-XSLT Templates to deliver Google Mini results in formats other than HTML
+XSLT Templates to deliver Google Mini results in formats other than HTML.
+    
+The templates json.xsl and jsonp.xsl are released under the GPL version 2 license: http://www.gnu.org/licenses/gpl-2.0.html
+
+id.xsl is an identity transformation and is a common pattern and free for you to use (just google 'XSLT identity transformation' and you'll find loads of examples)
 
 The three XSLT templates in this directory have been tested on a Google Mini search appliance (version 5.0.4), but should work just as well on a Google Enterprise search appliance.
 

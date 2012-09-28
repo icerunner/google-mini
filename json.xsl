@@ -2,7 +2,10 @@
 
 <!-- Template to produce results in JSON format
   ** Philip McAllister, 13/09/2012
-  ** icerunner@gmail.com -->
+  ** icerunner@gmail.com
+  ** Released under GPL v2 license
+  ** http://www.gnu.org/licenses/gpl-2.0.html
+  -->
 
 	<xsl:output method="text"/>
 	
