@@ -1,10 +1,11 @@
 ﻿<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<!-- Template to produce results in JSONP format
-  ** Philip McAllister, 13/09/2012
+<!-- Template to produce results in JSON format
+  ** Philip McAllister, 01/10/2012
   ** icerunner@gmail.com
-  ** Released under GPL v2 license
-  ** http://www.gnu.org/licenses/gpl-2.0.html
+  ** Released under Creative Commons CC BY-SA 3.0
+  ** The templates json.xsl and jsonp.xsl are released under Creative Commons license "Attribution-ShareAlike 3.0 Unported" http://creativecommons.org/licenses/by-sa/3.0/
+  ** Please share any improvements or alterations you make to this template and please leave these comments in.
   -->
 
 	<xsl:output method="text"/>

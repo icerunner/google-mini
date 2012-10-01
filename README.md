@@ -3,7 +3,7 @@ google-mini
 
 XSLT Templates to deliver Google Mini results in formats other than HTML.
     
-The templates json.xsl and jsonp.xsl are released under the GPL version 2 license: http://www.gnu.org/licenses/gpl-2.0.html
+The templates json.xsl and jsonp.xsl are released under Creative Commons license "Attribution-ShareAlike 3.0 Unported" http://creativecommons.org/licenses/by-sa/3.0/
 
 id.xsl is an identity transformation and is a common pattern and free for you to use (just google 'XSLT identity transformation' and you'll find loads of examples)
 
