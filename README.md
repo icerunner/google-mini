@@ -40,6 +40,18 @@ This template will turn the search results into JSON formatted data. The structu
   
     {
         "query": "query-string",
+        
+        "keymatch":
+        [
+            {
+                "url": "http://your-site.com/url-to-keymatch-result",
+                "title": "Title of Keymatch result"
+            },
+            {
+                "url": "http://your-site.com/url-to-keymatch-result",
+                "title": "Title of Keymatch result"
+            }
+        ],
     
         "results":
         [
@@ -123,7 +135,10 @@ This template will turn the search results into JSON formatted data. The structu
 
 ###Description of data
 
-**query:** *[string]* Contains the query string that was passed to the search appliance  
+**query:** *[string]* Contains the query string that was passed to the search appliance
+**keymatch:** *[array]* Contains hashes corresponding to any Keymatch results you've set up for this search term
+  **url:** *[string]* URL to the Keymatch result
+  **title:** *[string]* The title of the Keymatch result
 **results:** *[array]* Contains hashes corresponding to each search result returned (default max 10 results)  
   **url:** *[string]* URL to the search result  
   **title:** *[string]* The title of the page or content found  

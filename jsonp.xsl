@@ -32,6 +32,13 @@
 	<xsl:text>",
 </xsl:text>
 
+      <xsl:if test="GM">
+        <xsl:text disable-output-escaping="yes">    "keymatch": [
+</xsl:text>		<xsl:apply-templates select="GM" />
+<xsl:text>  ],
+</xsl:text>
+      </xsl:if>
+      
   	<xsl:apply-templates select="RES" />
   	
   	<xsl:call-template name="results_navigation_wrapper">
@@ -75,6 +82,17 @@
 
 	</xsl:template>
 
+		<xsl:template match="GM">
+		<xsl:text disable-output-escaping="yes">	{
+</xsl:text>
+		<xsl:text disable-output-escaping="yes">	"title": "</xsl:text>
+		<xsl:value-of select="GD" /><xsl:text disable-output-escaping="yes">",
+		  "url": "</xsl:text>
+		  <xsl:value-of select="GL" /><xsl:text disable-output-escaping="yes">"
+  }</xsl:text>
+<xsl:if test="position() != last()"><xsl:text>,
+</xsl:text></xsl:if>
+	</xsl:template>
 
 	<xsl:template match="RES">	
 		<xsl:text disable-output-escaping="yes">	"results": [
