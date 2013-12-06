@@ -21,7 +21,7 @@
 </xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:text disable-output-escaping="yes">search_results_callback([
+				<xsl:text disable-output-escaping="yes">search_results_callback({
 </xsl:text>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -50,7 +50,7 @@
   	</xsl:call-template>
   	
   	<xsl:text disable-output-escaping="yes">
-}</xsl:text>  
+});</xsl:text>  
 	</xsl:template>
 	
 	
