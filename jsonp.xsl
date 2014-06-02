@@ -8,7 +8,7 @@
   ** Please share any improvements or alterations you make to this template and please leave these comments in.
   -->
 
-	<xsl:output method="text"/>
+	<xsl:output method="text" encoding="UTF-8" omit-xml-declaration="yes" indent="no" media-type="application/javascript"/>
 	
 	<xsl:template match="/">
 		<xsl:apply-templates select="GSP"/>
