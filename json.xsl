@@ -1,14 +1,16 @@
-﻿<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!-- Template to produce results in JSON format
   ** Philip McAllister, 01/10/2012
   ** icerunner@gmail.com
+  ** Additional fixes by bswatson (See github project for details)
+  ** https://github.com/icerunner/google-mini
   ** Released under Creative Commons CC BY-SA 3.0
   ** The templates json.xsl and jsonp.xsl are released under Creative Commons license "Attribution-ShareAlike 3.0 Unported" http://creativecommons.org/licenses/by-sa/3.0/
   ** Please share any improvements or alterations you make to this template and please leave these comments in.
   -->
 
-	<xsl:output method="text"/>
+	<xsl:output method="text" encoding="UTF-8" omit-xml-declaration="yes" indent="no" media-type="application/json"/>
 	
 	<xsl:template match="/">
 		<xsl:apply-templates select="GSP"/>
